@@ -1,0 +1,101 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.31.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Przemys³aw Grobecki, AGH- University of Science and Technology, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.31.0.0
+Toolchain Path:  D:\Programy\Keil\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14
+Assembler:       Armasm.exe V6.14
+Linker/Locator:  ArmLink.exe V6.14
+Library Manager: ArmAr.exe V6.14
+Hex Converter:   FromElf.exe V6.14
+CPU DLL:         SARMCM3.DLL V5.31.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.3.0
+Target DLL:      Segger\JL2CM3.dll V2.99.38.0
+Dialog DLL:      TARMCM1.DLL V1.14.2.0
+ 
+<h2>Project:</h2>
+D:\Studia\Studia_5_semestr\Technika_Mikroprocesorowa_II\labolatory\Projekt\uVision\Generator.uvprojx
+Project File Date:  12/10/2020
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14', folder: 'D:\Programy\Keil\ARM\ARMCLANG\Bin'
+Build target 'Generator'
+main.c(27): warning: no previous extern declaration for non-static variable 'beep' [-Wmissing-variable-declarations]
+double beep = 0;                                //resambles a single tone provided by for example a buzzer connected to the generator
+       ^
+main.c(27): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+double beep = 0;                                //resambles a single tone provided by for example a buzzer connected to the generator
+^
+main.c(28): warning: no previous extern declaration for non-static variable 'wynik_ok' [-Wmissing-variable-declarations]
+uint8_t wynik_ok = 1;   //used to comunicate interrupts with the main loop
+        ^
+main.c(28): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t wynik_ok = 1;   //used to comunicate interrupts with the main loop
+^
+main.c(33): warning: no previous extern declaration for non-static variable 'Sinus' [-Wmissing-variable-declarations]
+double Sinus[100] = {0.0};                                                                      //Sinus vector where the sinus values will be stored
+       ^
+main.c(33): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+double Sinus[100] = {0.0};                                                                      //Sinus vector where the sinus values will be stored
+^
+main.c(34): warning: no previous extern declaration for non-static variable 'Saw' [-Wmissing-variable-declarations]
+double Saw[100] = {0.0};                                                                                //Saw vector where the saw values will be stored
+       ^
+main.c(34): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+double Saw[100] = {0.0};                                                                                //Saw vector where the saw values will be stored
+^
+main.c(35): warning: no previous extern declaration for non-static variable 'Triangle' [-Wmissing-variable-declarations]
+double Triangle[100] = {0.0};                                                           //Triangle vector where the triangle values will be stored
+       ^
+main.c(35): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+double Triangle[100] = {0.0};                                                           //Triangle vector where the triangle values will be stored
+^
+main.c(36): warning: no previous extern declaration for non-static variable 'counter' [-Wmissing-variable-declarations]
+int counter = 0;
+    ^
+main.c(36): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int counter = 0;
+^
+6 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=7048 RO-data=656 RW-data=8 ZI-data=3288  
+".\Objects\Generator.axf" - 0 Error(s), 6 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.Kinetis_KLxx_DFP.1.15.0.pack
+                Keil.Kinetis_KLxx_DFP.1.15.0
+                NXP Kinetis KLxx Series Device Support and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Generator
+  D:\Programy\Keil\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  D:\Programy\Keil\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\system_MKL05Z4.c
+      Source file:   Device\Source\ARM\startup_MKL05Z4.s
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
