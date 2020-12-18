@@ -1,6 +1,6 @@
 Dependencies for Project 'Generator', Target 'Generator': (DO NOT MODIFY !)
 CompilerVersion: 6140000::V6.14::ARMCLANG
-F (.\main.c)(0x5FDB9ECC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_Generator-ID:/Programy/Keil/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Programy/Keil/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DMKL05Z32xxx4 -D_RTE_-o ./objects/main.o -MD)
+F (.\main.c)(0x5FDCD082)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_Generator-ID:/Programy/Keil/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/Programy/Keil/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include-D__UVISION_VERSION="531" -D_RTE_ -DMKL05Z32xxx4 -D_RTE_-o ./objects/main.o -MD)
 I (D:\Programy\Keil\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include\MKL05Z4.h)(0x585BD06A)
 I (D:\Programy\Keil\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8F2582)
 I (D:\Programy\Keil\ARM\ARMCLANG\include\stdint.h)(0x5ED66044)

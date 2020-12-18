@@ -26,15 +26,15 @@
 /*** Necessery Global Variables ***/
 double beep = 0;														//resambles a single tone provided by for example a buzzer connected to the generator
 uint8_t wynik_ok = 1; 											//used to comunicate interrupts with the main loop
-//uint8_t PIT_enable = 0;										//used in frequency_show mode to enable PIT_interrupts mode
+uint8_t PIT_enable = 0;										//used in frequency_show mode to enable PIT_interrupts mode
 static uint8_t w1 = 1; 											//used to get the the value from slider
 static uint8_t w2 = 1; 											//used in frequency_show mode
-//double freq = {0.0}; 
+double freq = {0.0}; 
 double Sinus[100] = {0.0}; 									//Sinus vector where the sinus values will be stored
 double Saw[100] = {0.0};	 									//Saw vector where the saw values will be stored
 double Triangle[100] = {0.0};								//Triangle vector where the triangle values will be stored
 int counter = 0;
-//char display[]={0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20};
+char display[]={0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20};
 
 static unsigned char generator_mode = 0;
 
@@ -44,12 +44,12 @@ void Change_Signal(void);
 /* In this handler we push the values of given signal to the DAC */
 void SysTick_Handler(void);
 
-/*
+
 void PIT_IRQHandler()
 {		
 	PIT_enable = 1;
-	freq = 16777216/(3000*w2);
-	freq *= 0.000000025;
+	freq = 1.0/(2000*w2);
+	//freq *= 0.00000006;
 	freq = 100*freq;
 	freq = 1.0/freq;
 	sprintf(display,"Freq: %.1lf",freq);
@@ -58,7 +58,7 @@ void PIT_IRQHandler()
 	PIT_enable = 0;
 	PIT->CHANNEL[0].TFLG = PIT_TFLG_TIF_MASK;		// Skasuj flage zadania przerwania
 }
-*/
+
 
 /* SysTick initialisation function */
 void SysTick_Init(unsigned int divider);
@@ -74,7 +74,7 @@ void TriangleInit(double *triangle);
 
 int main (void){
 	/* Init block */
-	SysTick_Init(SystemCoreClock/1000);
+	SysTick_Init(16777216);
 	buttonsInitialize();
 	SineInit(Sinus);
 	SawInit(Saw);
@@ -88,18 +88,18 @@ int main (void){
 	
 	DAC_Load_Trig(0);	// Wyzwolenie prztwornika C/A wartoscia poczatkowa
 	while(1){
-	//if(!PIT_enable){
+	if(!PIT_enable){
 			w1 = TSI_ReadSlider();	
 			if(w1!=0){
 				w2=w1;
-				SysTick_Config(SystemCoreClock / (w2*3000)); //By changing systick options we modulate the frequency
+				SysTick_Config( 16777216/ (w2*2000)); //By changing systick options we modulate the frequency SystemCoreClock
 			}
 			if(wynik_ok){
 				DAC_Load_Trig((uint16_t)(2000*beep));
 				wynik_ok = 0; 
 			}
 		}
- //}
+ }
 }
 
 
@@ -120,7 +120,7 @@ void Change_Signal(void){
 
 /* In this handler we set the values of given signal to the beep so the DAC can use them */
 void SysTick_Handler(void){
-//if(!PIT_enable){
+if(!PIT_enable){
 		if(~wynik_ok){
 			if(generator_mode == 0){
 				beep = Sinus[counter];
@@ -141,7 +141,7 @@ void SysTick_Handler(void){
 				wynik_ok =1;
 			}
 		}
-//}
+}
 }
 
 
