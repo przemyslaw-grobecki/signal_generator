@@ -48,7 +48,7 @@ void SysTick_Handler(void);
 void PIT_IRQHandler()
 {		
 	PIT_enable = 1;
-	freq = 41943040/(3000*w2);
+	freq = 16777216/(3000*w2);
 	freq *= 0.000000025;
 	freq = 100*freq;
 	freq = 1.0/freq;
@@ -79,11 +79,11 @@ int main (void){
 	SineInit(Sinus);
 	SawInit(Saw);
 	TriangleInit(Triangle);
-	//LCD1602_Init();
-	//LCD1602_Backlight(TRUE);
+	LCD1602_Init();
+	LCD1602_Backlight(TRUE);
 	TSI_Init();
 	DAC_Init();
-	//PIT_Init();
+	PIT_Init();
 	/* Init block - End */
 	
 	DAC_Load_Trig(0);	// Wyzwolenie prztwornika C/A wartoscia poczatkowa
