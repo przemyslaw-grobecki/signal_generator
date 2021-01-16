@@ -11,4 +11,4 @@
   D:\Programy\Keil\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   D:\Programy\Keil\ARM\ARMCLANG\Bin\..\include\stdio.h \
   D:\Programy\Keil\ARM\ARMCLANG\Bin\..\include\math.h DAC.h frdm_bsp.h \
-  tsi.h buttons.h lcd1602.h i2c.h pit.h
+  tsi.h buttons.h lcd1602.h i2c.h

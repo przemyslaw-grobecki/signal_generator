@@ -8,4 +8,4 @@
   D:\Programy\Keil\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
   D:\Programy\Keil\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   D:\Programy\Keil\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include\system_MKL05Z4.h \
-  buttons.h
+  buttons.h frdm_bsp.h

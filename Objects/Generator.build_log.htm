@@ -22,70 +22,15 @@ Dialog DLL:      TARMCM1.DLL V1.14.2.0
  
 <h2>Project:</h2>
 D:\Projekty\embedded_spectrum_analyzer_git\signal_generator\Generator.uvprojx
-Project File Date:  12/10/2020
+Project File Date:  01/16/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.14', folder: 'D:\Programy\Keil\ARM\ARMCLANG\Bin'
 Build target 'Generator'
-main.c(28): warning: no previous extern declaration for non-static variable 'beep' [-Wmissing-variable-declarations]
-double beep = 0;                                                                                                                //resambles a single tone provided by for example a buzzer connected to the generator
-       ^
-main.c(28): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-double beep = 0;                                                                                                                //resambles a single tone provided by for example a buzzer connected to the generator
-^
-main.c(29): warning: no previous extern declaration for non-static variable 'wynik_ok' [-Wmissing-variable-declarations]
-uint8_t wynik_ok = 1;                                                                                   //used to comunicate interrupts with the main loop
-        ^
-main.c(29): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-uint8_t wynik_ok = 1;                                                                                   //used to comunicate interrupts with the main loop
-^
-main.c(30): warning: no previous extern declaration for non-static variable 'PIT_enable' [-Wmissing-variable-declarations]
-uint8_t PIT_enable = 0;                                                                         //used in frequency_show mode to enable PIT_interrupts mode
-        ^
-main.c(30): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-uint8_t PIT_enable = 0;                                                                         //used in frequency_show mode to enable PIT_interrupts mode
-^
-main.c(33): warning: no previous extern declaration for non-static variable 'freq' [-Wmissing-variable-declarations]
-double freq = {0.0}; 
-       ^
-main.c(33): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-double freq = {0.0}; 
-^
-main.c(34): warning: no previous extern declaration for non-static variable 'Sinus' [-Wmissing-variable-declarations]
-double Sinus[100] = {0.0};                                                                      //Sinus vector where the sinus values will be stored
-       ^
-main.c(34): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-double Sinus[100] = {0.0};                                                                      //Sinus vector where the sinus values will be stored
-^
-main.c(35): warning: no previous extern declaration for non-static variable 'Saw' [-Wmissing-variable-declarations]
-double Saw[100] = {0.0};                                                                                //Saw vector where the saw values will be stored
-       ^
-main.c(35): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-double Saw[100] = {0.0};                                                                                //Saw vector where the saw values will be stored
-^
-main.c(36): warning: no previous extern declaration for non-static variable 'Triangle' [-Wmissing-variable-declarations]
-double Triangle[100] = {0.0};                                                           //Triangle vector where the triangle values will be stored
-       ^
-main.c(36): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-double Triangle[100] = {0.0};                                                           //Triangle vector where the triangle values will be stored
-^
-main.c(37): warning: no previous extern declaration for non-static variable 'counter' [-Wmissing-variable-declarations]
-int counter = 0;
-    ^
-main.c(37): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-int counter = 0;
-^
-main.c(38): warning: no previous extern declaration for non-static variable 'display' [-Wmissing-variable-declarations]
-char display[]={0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20};
-     ^
-main.c(38): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-char display[]={0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20};
-^
-9 warnings generated.
-compiling main.c...
+compiling lcd1602.c...
 linking...
-Program Size: Code=7572 RO-data=660 RW-data=8 ZI-data=3296  
-".\Objects\Generator.axf" - 0 Error(s), 9 Warning(s).
+Program Size: Code=12162 RO-data=830 RW-data=28 ZI-data=3320  
+".\Objects\Generator.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -111,8 +56,8 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.4.0
 
    * Component: Keil::Device:Startup:1.0.0
-      Source file:   Device\Source\ARM\startup_MKL05Z4.s
       Source file:   Device\Source\system_MKL05Z4.c
+      Source file:   Device\Source\ARM\startup_MKL05Z4.s
 Build Time Elapsed:  00:00:01
 </pre>
 </body>

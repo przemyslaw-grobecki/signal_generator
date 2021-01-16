@@ -8,7 +8,7 @@
 #define LCD_SETDDRAMADDR 		0x80
 #define LCD_FULLLINE				0x40
 /* PCF8574 */
-#define PCF8574_ADDRESS     0x27 	/* I2C slave device,  PCF8574A=0x3F */ 
+#define PCF8574_ADDRESS     0x3f 	/* I2C slave device,  PCF8574A=0x3F */ 
 /* PCF8574 connections to LCD */
 //#define PCF8574_D7 0x80
 //#define PCF8574_D6 0x40
